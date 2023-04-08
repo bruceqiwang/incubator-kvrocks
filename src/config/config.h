@@ -162,8 +162,6 @@ struct Config {
     int max_open_files;
     int write_buffer_size;
     int max_write_buffer_number;
-    int max_background_compactions;
-    int max_background_flushes;
     int max_sub_compactions;
     int stats_dump_period_sec;
     bool enable_pipelined_write;
@@ -186,6 +184,7 @@ struct Config {
     int max_bytes_for_level_base;
     int max_bytes_for_level_multiplier;
     bool level_compaction_dynamic_level_bytes;
+    int max_background_jobs;
 
     struct WriteOptions {
       bool sync;
